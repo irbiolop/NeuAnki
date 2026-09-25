@@ -29,7 +29,7 @@ public final class CrashReport {
             public void uncaughtException(Thread t, Throwable e) {
                 try {
                     Writer w = new FileWriter(file(c), true);
-                    w.write("\n=== کرش در ")
+                    w.append("\n=== کرش در ")
                             .append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(new Date()))
                             .append(" ===\n")
                             .append(android.util.Log.getStackTraceString(e));
