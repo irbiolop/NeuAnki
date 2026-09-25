@@ -35,19 +35,25 @@ jobs:
       - name: Boot emulator
         run: |
           export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+          export ANDROID_USER_HOME=$HOME/.android
+          export ANDROID_AVD_HOME=$HOME/.android/avd
+          mkdir -p "$ANDROID_AVD_HOME"
+          ls -la /dev/kvm || echo "NO KVM DEVICE"
           echo "no" | $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
-          $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel on > emulator.log 2>&1 &
+          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list avd || true
+          $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel auto > emulator.log 2>&1 &
           adb wait-for-device
-          for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+          for i in $(seq 1 60); do
             BOOT=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r' || echo 0)
             echo "boot check $i: $BOOT"
             if [ "$BOOT" = "1" ]; then
               echo "EMULATOR BOOTED"
               break
             fi
-            sleep 15
+            sleep 10
           done
-        timeout-minutes: 12
+          cat emulator.log || true
+        timeout-minutes: 20
 
       - name: Install and launch app
         run: |
