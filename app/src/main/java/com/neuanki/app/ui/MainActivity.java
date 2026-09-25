@@ -19,6 +19,7 @@ import com.neuanki.app.db.Deck;
 import com.neuanki.app.db.Store;
 import com.neuanki.app.imp.ApkgImporter;
 import com.neuanki.app.util.Util;
+import com.neuanki.app.widget.NeumorphButton;
 import com.neuanki.app.widget.NeumorphIconButton;
 
 import java.util.HashMap;
@@ -55,7 +56,7 @@ public class MainActivity extends Base implements DeckAdapter.Listener {
         NeumorphIconButton btnBrowser = findViewById(R.id.btnBrowser);
         NeumorphIconButton btnStats = findViewById(R.id.btnStats);
         NeumorphIconButton btnSettings = findViewById(R.id.btnSettings);
-        NeumorphIconButton btnEmptyImport = findViewById(R.id.btnEmptyImport);
+        NeumorphButton btnEmptyImport = findViewById(R.id.btnEmptyImport);
 
         adapter = new DeckAdapter(this);
         rvDecks.setLayoutManager(new LinearLayoutManager(this));
