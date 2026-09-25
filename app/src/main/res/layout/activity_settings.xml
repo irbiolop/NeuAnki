@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <com.neuanki.app.widget.NeumorphIconButton
+                    android:id="@+id/btnBackSt"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="@string/cd_back"
+                    app:nm_radius="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/settings"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary" />
+            </LinearLayout>
+
+            <com.neuanki.app.widget.NeumorphLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="14dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                app:nm_radius="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rowNewLimit"
+                        style="@style/SettingsRow">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_new_limit"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/tvNewLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/accentBright" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowRevLimit"
+                        style="@style/SettingsRow">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_rev_limit"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/tvRevLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/accentBright" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowSteps"
+                        style="@style/SettingsRow">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_steps"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:id="@+id/tvSteps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/accentBright" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.neuanki.app.widget.NeumorphLayout>
+
+            <com.neuanki.app.widget.NeumorphLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_marginTop="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                app:nm_radius="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings_reminder"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/swReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rowAbout"
+                        style="@style/SettingsRow">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_about"
+                            android:textSize="15sp"
+                            android:textColor="@color/textPrimary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/settings_about_desc"
+                            android:textSize="12sp"
+                            android:textColor="@color/textSecondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.neuanki.app.widget.NeumorphLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.neuanki.app.widget.NeumorphIconButton
+            android:id="@+id/btnBackBr"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/cd_back"
+            app:nm_radius="14dp" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_inset"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionSearch" />
+
+        <com.neuanki.app.widget.NeumorphIconButton
+            android:id="@+id/btnDeckFilter"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_style"
+            android:contentDescription="@string/all_decks"
+            app:nm_radius="14dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBrCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="13sp"
+        android:textColor="@color/textHint" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCards"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="20dp"
+        android:overScrollMode="never" />
+
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/no_results"
+        android:textSize="15sp"
+        android:textColor="@color/textHint"
+        android:visibility="gone" />
+</LinearLayout>

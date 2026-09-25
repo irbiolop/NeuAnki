@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نئوآنکی</string>
+
+    <!-- اکتیویتی‌ها -->
+    <string name="stats">آمار</string>
+    <string name="browser">مرورگر کارت‌ها</string>
+    <string name="settings">تنظیمات</string>
+    <string name="review">مرور</string>
+
+    <!-- منوها -->
+    <string name="menu_import">وارد کردن فایل apkg</string>
+    <string name="menu_add_card">افزودن کارت</string>
+    <string name="review_all">مرور همهٔ دک‌ها</string>
+
+    <!-- لیست دک‌ها -->
+    <string name="empty_title">هنوز دکی وجود ندارد</string>
+    <string name="empty_sub">فایل apkg دک‌های انکی را وارد کن تا یادگیری را شروع کنیم</string>
+    <string name="empty_import">وارد کردن دک انکی</string>
+    <string name="deck_new">جدید</string>
+    <string name="deck_learn">یادگیری</string>
+    <string name="deck_due">مرور</string>
+    <string name="rename_deck">تغییر نام دک</string>
+    <string name="deck_name">نام دک</string>
+    <string name="confirm_delete_deck_title">حذف دک</string>
+    <string name="confirm_delete_deck_msg">«%1$s» و همهٔ کارت‌های آن حذف شود؟</string>
+    <string name="deck_deleted">دک حذف شد</string>
+    <string name="deck_renamed">نام دک تغییر کرد</string>
+    <string name="choose_file">انتخاب فایل apkg</string>
+
+    <!-- مرور -->
+    <string name="show_answer">نمایش پاسخ</string>
+    <string name="again">دوباره</string>
+    <string name="hard">سخت</string>
+    <string name="good">خوب</string>
+    <string name="easy">آسان</string>
+    <string name="finished_title">جلسهٔ مرور تمام شد!</string>
+    <string name="finished_sub">امروز %1$s کارت مرور کردی. عالی بود</string>
+    <string name="check_again">بررسی مجدد</string>
+    <string name="undo">بازگردانی</string>
+    <string name="nothing_to_undo">چیزی برای بازگردانی نیست</string>
+    <string name="suspend_card">تعلیق کارت</string>
+    <string name="unsuspend_card">رفع تعلیق کارت</string>
+    <string name="bury_card">دفن کارت برای امروز</string>
+    <string name="edit_card">ویرایش کارت</string>
+    <string name="delete_card">حذف کارت</string>
+    <string name="end_session">پایان جلسه</string>
+    <string name="more_options">گزینه‌های بیشتر</string>
+    <string name="suspended_msg">کارت تعلیق شد</string>
+    <string name="unsuspended_msg">تعلیق کارت برداشته شد</string>
+    <string name="buried_msg">کارت برای امروز دفن شد</string>
+    <string name="card_deleted">کارت حذف شد</string>
+    <string name="session_reviewed_fmt">در این جلسه %1$s کارت مرور شد</string>
+    <string name="next_in">مرور بعدی تا %1$s</string>
+    <string name="review_none">کارتی برای مرور نیست</string>
+    <string name="type_answer_hint">پاسخ را تایپ کن…</string>
+
+    <!-- مرورگر -->
+    <string name="search_hint">جستجو در کارت‌ها…</string>
+    <string name="all_decks">همهٔ دک‌ها</string>
+    <string name="no_results">نتیجه‌ای پیدا نشد</string>
+    <string name="confirm_delete_note">حذف این یادداشت و همهٔ کارت‌هایش؟</string>
+    <string name="note_deleted">یادداشت حذف شد</string>
+    <string name="tags_hint">برچسب‌ها (با فاصله جدا شوند)</string>
+    <string name="choose_deck">انتخاب دک</string>
+    <string name="note_type">نوع یادداشت</string>
+    <string name="card_added">کارت اضافه شد</string>
+    <string name="saved">ذخیره شد</string>
+    <string name="need_field">حداقل یکی از فیلدها را پر کن</string>
+
+    <!-- ایمپورت -->
+    <string name="importing">در حال وارد کردن دک…</string>
+    <string name="import_done_fmt">وارد شد: %1$s دک، %2$s یادداشت، %3$s کارت، %4$s فایل مدیا</string>
+    <string name="import_err_newformat">این فایل با فرمت جدید انکی ساخته شده است. لطفاً در Anki دسکتاپ هنگام خروجی گرفتن، گزینهٔ «پشتیبانی از نسخه‌های قدیمی‌تر» را فعال کن و دوباره تلاش کن.</string>
+    <string name="import_err">فایل apkg معتبر نیست یا خراب است.</string>
+
+    <!-- آمار -->
+    <string name="stats_today">مرورهای امروز</string>
+    <string name="stats_total">کل کارت‌ها</string>
+    <string name="stats_streak">زنجیرهٔ روزها</string>
+    <string name="stats_correct">پاسخ خوب</string>
+    <string name="stats_reviews_30">مرورهای ۳۰ روز گذشته</string>
+    <string name="stats_forecast">پیش‌بینی مرور ۳۰ روز آینده</string>
+    <string name="stats_dist">توزیع وضعیت کارت‌ها</string>
+    <string name="dist_new">جدید</string>
+    <string name="dist_learn">در حال یادگیری</string>
+    <string name="dist_young">جوان</string>
+    <string name="dist_mature">بالغ</string>
+    <string name="dist_susp">معلق</string>
+
+    <!-- تنظیمات -->
+    <string name="settings_new_limit">سقف کارت‌های جدید روزانه</string>
+    <string name="settings_rev_limit">سقف مرور روزانه</string>
+    <string name="settings_steps">مراحل یادگیری (دقیقه)</string>
+    <string name="settings_steps_desc">با ویرگول جدا کن، مثلاً 1,10</string>
+    <string name="settings_reminder">یادآور روزانه</string>
+    <string name="settings_reminder_on">یادآور روزانه فعال شد</string>
+    <string name="settings_reminder_off">یادآور خاموش شد</string>
+    <string name="settings_about">دربارهٔ نئوآنکی</string>
+    <string name="settings_about_desc">کلون نئومورفِ AnkiDroid — نسخهٔ ۱٫۰ — همهٔ داده‌ها فقط روی دستگاه ذخیره می‌شوند</string>
+    <string name="pick_time">انتخاب زمان</string>
+    <string name="perm_denied">برای نمایش یادآور، اجازهٔ اعلان را بده</string>
+
+    <!-- عمومی -->
+    <string name="save">ذخیره</string>
+    <string name="cancel">انصراف</string>
+    <string name="delete">حذف</string>
+    <string name="ok">باشه</string>
+    <string name="yes">بله</string>
+    <string name="today">امروز</string>
+    <string name="day">روز</string>
+    <string name="days">روز</string>
+    <string name="min">دقیقه</string>
+    <string name="month">ماه</string>
+
+    <!-- نوتیفیکیشن -->
+    <string name="notif_channel">یادآور مرور روزانه</string>
+    <string name="notif_title">وقت مرور است</string>
+    <string name="notif_text_fmt">%1$s کارت آمادهٔ مرور است</string>
+
+    <!-- توصیف محتوا -->
+    <string name="cd_back">بازگشت</string>
+    <string name="cd_stats">آمار</string>
+    <string name="cd_browser">مرورگر</string>
+    <string name="cd_settings">تنظیمات</string>
+    <string name="cd_import">وارد کردن</string>
+    <string name="cd_undo">بازگردانی</string>
+    <string name="cd_more">گزینه‌ها</string>
+    <string name="cd_fab">دکمهٔ اصلی</string>
+</resources>

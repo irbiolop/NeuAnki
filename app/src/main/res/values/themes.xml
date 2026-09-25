@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NeuAnki" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bgDeep</item>
+        <item name="android:navigationBarColor">@color/bgDeep</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryDark">@color/bgDeep</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:fontFamily">@font/vazirmatn</item>
+        <item name="fontFamily">@font/vazirmatn</item>
+        <item name="android:textColorHint">@color/textHint</item>
+        <item name="alertDialogTheme">@style/NeuDialog</item>
+    </style>
+
+    <style name="NeuDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">@font/vazirmatn</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlNormal">@color/textHint</item>
+        <item name="buttonBarPositiveButtonStyle">@style/NeuDialogBtn</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NeuDialogBtnMuted</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeuDialogBtnMuted</item>
+    </style>
+
+    <style name="NeuDialogBtn" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/accentBright</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NeuDialogBtnMuted" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="CountChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SettingsRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+</resources>
