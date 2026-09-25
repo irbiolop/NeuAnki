@@ -22,6 +22,16 @@ public class Db extends SQLiteOpenHelper {
         super(c, "neuanki.db", null, 1);
     }
 
+    /** دسترسی خواندن از دیتابیس */
+    public SQLiteDatabase r() {
+        return getReadableDatabase();
+    }
+
+    /** دسترسی نوشتن در دیتابیس */
+    public SQLiteDatabase w() {
+        return getWritableDatabase();
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE decks(id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE)");
