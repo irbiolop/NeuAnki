@@ -30,11 +30,11 @@ jobs:
       - name: Install system image
         run: |
           yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager --install "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" > /dev/null
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" > /dev/null
 
       - name: Boot emulator
         run: |
-          echo "no" | avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
+          echo "no" | $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
           $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel on > emulator.log 2>&1 &
           adb wait-for-device
           for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
