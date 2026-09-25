@@ -34,6 +34,7 @@ jobs:
 
       - name: Boot emulator
         run: |
+          export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
           echo "no" | $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
           $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel on > emulator.log 2>&1 &
           adb wait-for-device
@@ -50,6 +51,7 @@ jobs:
 
       - name: Install and launch app
         run: |
+          export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
           adb install -r app/build/outputs/apk/debug/app-debug.apk
           adb logcat -c
           adb shell am start -W -n com.neuanki.app/.ui.MainActivity
