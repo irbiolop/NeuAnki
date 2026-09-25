@@ -39,6 +39,7 @@ jobs:
           export ANDROID_AVD_HOME=$HOME/.android/avd
           mkdir -p "$ANDROID_AVD_HOME"
           ls -la /dev/kvm || echo "NO KVM DEVICE"
+          sudo chmod 666 /dev/kvm || true
           echo "no" | $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
           $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list avd || true
           $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel auto > emulator.log 2>&1 &
