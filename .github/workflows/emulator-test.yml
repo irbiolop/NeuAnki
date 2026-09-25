@@ -11,7 +11,7 @@ on:
 jobs:
   launch:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -27,43 +27,55 @@ jobs:
       - name: Build debug APK
         run: ./gradlew assembleDebug --stacktrace
 
-      - name: Launch app on emulator (API ${{ github.event.inputs.api }})
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ github.event.inputs.api }}
-          target: google_apis
-          arch: x86_64
-          emulator-boot-timeout: 900
-          script: |
-            adb install -r app/build/outputs/apk/debug/app-debug.apk
-            adb logcat -c
-            echo "=== LAUNCHING ==="
-            adb shell am start -W -n com.neuanki.app/.ui.MainActivity
-            sleep 25
-            echo "=== PROCESS CHECK ==="
-            PID=$(adb shell pidof com.neuanki.app | tr -d '\r\n ')
-            if [ -n "$PID" ] && [ "$PID" != "" ]; then
-              echo "APP ALIVE with pid=$PID"
-            else
-              echo "PROCESS_DEAD"
+      - name: Install system image
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+          sdkmanager --install "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" > /dev/null
+
+      - name: Boot emulator
+        run: |
+          echo "no" | avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
+          $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel on > emulator.log 2>&1 &
+          adb wait-for-device
+          for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+            BOOT=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r' || echo 0)
+            echo "boot check $i: $BOOT"
+            if [ "$BOOT" = "1" ]; then
+              echo "EMULATOR BOOTED"
+              break
             fi
-            echo "=== CRASH BUFFER ==="
-            adb logcat -d -b crash | tee crash_report.txt
-            echo "=== SCREENSHOT ==="
-            adb exec-out screencap -p > screenshot.png || true
-            CRASHES=$(grep -c "FATAL EXCEPTION" crash_report.txt || true)
-            if [ "$CRASHES" -gt 0 ]; then
-              echo "RESULT: APP CRASHED"
-              exit 1
-            else
-              echo "RESULT: APP RUNNING OK"
-            fi
+            sleep 15
+          done
+        timeout-minutes: 12
+
+      - name: Install and launch app
+        run: |
+          adb install -r app/build/outputs/apk/debug/app-debug.apk
+          adb logcat -c
+          adb shell am start -W -n com.neuanki.app/.ui.MainActivity
+          sleep 25
+          echo "=== PROCESS CHECK ==="
+          adb shell pidof com.neuanki.app || echo PROCESS_DEAD
+          echo "=== CRASH BUFFER ==="
+          adb logcat -d -b crash | tee crash_report.txt
+          echo "=== SCREENSHOT ==="
+          adb exec-out screencap -p > screenshot.png || true
+          ls -la screenshot.png || true
+
+      - name: Verdict
+        run: |
+          if grep -q "FATAL EXCEPTION" crash_report.txt; then
+            echo "RESULT: APP CRASHED"
+            exit 1
+          fi
+          echo "RESULT: APP RUNNING OK"
 
       - name: Upload logs and screenshot
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: emulator-api${{ github.event.inputs.api }}-logs
+          name: emulator-logs
           path: |
             crash_report.txt
             screenshot.png
+            emulator.log
