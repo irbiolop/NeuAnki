@@ -118,6 +118,11 @@
     <string name="notif_title">وقت مرور است</string>
     <string name="notif_text_fmt">%1$s کارت آمادهٔ مرور است</string>
 
+    <!-- گزارش کرش -->
+    <string name="crash_title">گزارش خطا</string>
+    <string name="crash_send">ارسال گزارش خطا</string>
+    <string name="crash_later">بستن</string>
+
     <!-- توصیف محتوا -->
     <string name="cd_back">بازگشت</string>
     <string name="cd_stats">آمار</string>

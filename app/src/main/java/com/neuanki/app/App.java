@@ -23,6 +23,7 @@ public class App extends Application {
         Configuration cfg = new Configuration(base.getResources().getConfiguration());
         cfg.setLocale(new Locale("fa"));
         super.attachBaseContext(base.createConfigurationContext(cfg));
+        com.neuanki.app.util.CrashReport.install(this);
     }
 
     @Override
