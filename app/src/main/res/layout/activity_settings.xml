@@ -30,7 +30,7 @@
                 android:clipChildren="false"
                 android:clipToPadding="false">
 
-                <com.neuanki.app.widget.NeumorphIconButton
+                <ir.scicore.flash.widget.NeumorphIconButton
                     android:id="@+id/btnBackSt"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
@@ -49,7 +49,7 @@
                     android:textColor="@color/textPrimary" />
             </LinearLayout>
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -117,9 +117,9 @@
                             android:textColor="@color/accentBright" />
                     </LinearLayout>
                 </LinearLayout>
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -175,7 +175,7 @@
                             android:textColor="@color/textSecondary" />
                     </LinearLayout>
                 </LinearLayout>
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

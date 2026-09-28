@@ -61,10 +61,10 @@ jobs:
           export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
           adb install -r app/build/outputs/apk/debug/app-debug.apk
           adb logcat -c
-          adb shell am start -W -n com.neuanki.app/.ui.MainActivity
+          adb shell am start -W -n ir.scicore.flash/.ui.MainActivity
           sleep 25
           echo "=== PROCESS CHECK ==="
-          adb shell pidof com.neuanki.app || echo PROCESS_DEAD
+          adb shell pidof ir.scicore.flash || echo PROCESS_DEAD
           echo "=== CRASH BUFFER ==="
           adb logcat -d -b crash | tee crash_report.txt
           echo "=== SCREENSHOT ==="

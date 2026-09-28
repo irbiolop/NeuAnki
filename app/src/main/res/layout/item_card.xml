@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.neuanki.app.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ir.scicore.flash.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardItemRoot"
     android:layout_width="match_parent"
@@ -55,4 +55,4 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
-</com.neuanki.app.widget.NeumorphLayout>
+</ir.scicore.flash.widget.NeumorphLayout>

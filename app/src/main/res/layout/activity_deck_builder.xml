@@ -18,7 +18,7 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.neuanki.app.widget.NeumorphIconButton
+        <ir.scicore.flash.widget.NeumorphIconButton
             android:id="@+id/btnBack"
             android:layout_width="42dp"
             android:layout_height="42dp"
@@ -36,7 +36,7 @@
             android:textStyle="bold"
             android:textColor="@color/textPrimary" />
 
-        <com.neuanki.app.widget.NeumorphIconButton
+        <ir.scicore.flash.widget.NeumorphIconButton
             android:id="@+id/btnAiGuide"
             android:layout_width="42dp"
             android:layout_height="42dp"
@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <!-- دکمهٔ آموزش هوش مصنوعی -->
-    <com.neuanki.app.widget.NeumorphButton
+    <ir.scicore.flash.widget.NeumorphButton
         android:id="@+id/btnOpenAiGuide"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -146,7 +146,7 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.neuanki.app.widget.NeumorphButton
+        <ir.scicore.flash.widget.NeumorphButton
             android:id="@+id/btnAddCard"
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -157,7 +157,7 @@
             android:textSize="14sp"
             app:nm_radius="15dp" />
 
-        <com.neuanki.app.widget.NeumorphButton
+        <ir.scicore.flash.widget.NeumorphButton
             android:id="@+id/btnImportText"
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -170,7 +170,7 @@
     </LinearLayout>
 
     <!-- ذخیرهٔ دک -->
-    <com.neuanki.app.widget.NeumorphButton
+    <ir.scicore.flash.widget.NeumorphButton
         android:id="@+id/btnSaveDeck"
         android:layout_width="match_parent"
         android:layout_height="54dp"

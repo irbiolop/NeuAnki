@@ -16,7 +16,7 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.neuanki.app.widget.NeumorphIconButton
+        <ir.scicore.flash.widget.NeumorphIconButton
             android:id="@+id/btnBackBr"
             android:layout_width="42dp"
             android:layout_height="42dp"
@@ -42,7 +42,7 @@
             android:maxLines="1"
             android:imeOptions="actionSearch" />
 
-        <com.neuanki.app.widget.NeumorphIconButton
+        <ir.scicore.flash.widget.NeumorphIconButton
             android:id="@+id/btnDeckFilter"
             android:layout_width="42dp"
             android:layout_height="42dp"

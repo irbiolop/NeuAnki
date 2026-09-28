@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.neuanki.app.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ir.scicore.flash.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/deckRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:layout_marginBottom="14dp"
+    android:layout_marginBottom="18dp"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
     android:paddingTop="16dp"
@@ -54,4 +54,4 @@
                 android:textColor="@color/countDue" />
         </LinearLayout>
     </LinearLayout>
-</com.neuanki.app.widget.NeumorphLayout>
+</ir.scicore.flash.widget.NeumorphLayout>

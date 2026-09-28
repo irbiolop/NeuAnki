@@ -39,7 +39,7 @@
                 android:clipChildren="false"
                 android:clipToPadding="false">
 
-                <com.neuanki.app.widget.NeumorphLayout
+                <ir.scicore.flash.widget.NeumorphLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -69,9 +69,9 @@
                             android:textSize="12sp"
                             android:textColor="@color/textSecondary" />
                     </LinearLayout>
-                </com.neuanki.app.widget.NeumorphLayout>
+                </ir.scicore.flash.widget.NeumorphLayout>
 
-                <com.neuanki.app.widget.NeumorphLayout
+                <ir.scicore.flash.widget.NeumorphLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -101,7 +101,7 @@
                             android:textSize="12sp"
                             android:textColor="@color/textSecondary" />
                     </LinearLayout>
-                </com.neuanki.app.widget.NeumorphLayout>
+                </ir.scicore.flash.widget.NeumorphLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -111,7 +111,7 @@
                 android:clipChildren="false"
                 android:clipToPadding="false">
 
-                <com.neuanki.app.widget.NeumorphLayout
+                <ir.scicore.flash.widget.NeumorphLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -141,9 +141,9 @@
                             android:textSize="12sp"
                             android:textColor="@color/textSecondary" />
                     </LinearLayout>
-                </com.neuanki.app.widget.NeumorphLayout>
+                </ir.scicore.flash.widget.NeumorphLayout>
 
-                <com.neuanki.app.widget.NeumorphLayout
+                <ir.scicore.flash.widget.NeumorphLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -173,7 +173,7 @@
                             android:textSize="12sp"
                             android:textColor="@color/textSecondary" />
                     </LinearLayout>
-                </com.neuanki.app.widget.NeumorphLayout>
+                </ir.scicore.flash.widget.NeumorphLayout>
             </LinearLayout>
 
             <!-- نمودار مرورهای گذشته -->
@@ -188,7 +188,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/textPrimary" />
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -199,7 +199,7 @@
                     android:id="@+id/chartReviews"
                     android:layout_width="match_parent"
                     android:layout_height="220dp" />
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
 
             <!-- نمودار پیش‌بینی -->
             <TextView
@@ -213,7 +213,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/textPrimary" />
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -224,7 +224,7 @@
                     android:id="@+id/chartForecast"
                     android:layout_width="match_parent"
                     android:layout_height="220dp" />
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
 
             <!-- نمودار توزیع -->
             <TextView
@@ -238,7 +238,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/textPrimary" />
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -249,7 +249,7 @@
                     android:id="@+id/chartPie"
                     android:layout_width="match_parent"
                     android:layout_height="260dp" />
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -18,7 +18,7 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.neuanki.app.widget.NeumorphIconButton
+        <ir.scicore.flash.widget.NeumorphIconButton
             android:id="@+id/btnBack"
             android:layout_width="42dp"
             android:layout_height="42dp"
@@ -88,7 +88,7 @@
                 style="@style/GuideStepBody"
                 android:text="@string/ai_step2_body" />
 
-            <com.neuanki.app.widget.NeumorphButton
+            <ir.scicore.flash.widget.NeumorphButton
                 android:id="@+id/btnOpenDeepseek"
                 android:layout_width="wrap_content"
                 android:layout_height="46dp"
@@ -111,7 +111,7 @@
                 android:text="@string/ai_step3_body" />
 
             <!-- پرامپت ۱ -->
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -143,7 +143,7 @@
                         android:textColor="@color/textPrimary"
                         android:textIsSelectable="true" />
 
-                    <com.neuanki.app.widget.NeumorphButton
+                    <ir.scicore.flash.widget.NeumorphButton
                         android:id="@+id/btnCopy1"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
@@ -153,10 +153,10 @@
                         android:textSize="13sp"
                         app:nm_radius="13dp" />
                 </LinearLayout>
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
 
             <!-- پرامپت ۲ -->
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -188,7 +188,7 @@
                         android:textColor="@color/textPrimary"
                         android:textIsSelectable="true" />
 
-                    <com.neuanki.app.widget.NeumorphButton
+                    <ir.scicore.flash.widget.NeumorphButton
                         android:id="@+id/btnCopy2"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
@@ -198,7 +198,7 @@
                         android:textSize="13sp"
                         app:nm_radius="13dp" />
                 </LinearLayout>
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
 
             <!-- قدم ۴ -->
             <TextView
@@ -214,7 +214,7 @@
                 style="@style/GuideStepTitle"
                 android:text="@string/ai_tips_title" />
 
-            <com.neuanki.app.widget.NeumorphLayout
+            <ir.scicore.flash.widget.NeumorphLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -229,7 +229,7 @@
                     android:text="@string/ai_tips_body"
                     android:textSize="13sp"
                     android:textColor="@color/textSecondary" />
-            </com.neuanki.app.widget.NeumorphLayout>
+            </ir.scicore.flash.widget.NeumorphLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

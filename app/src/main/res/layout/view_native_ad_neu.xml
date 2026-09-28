@@ -3,9 +3,10 @@
     قالب تبلیغ همسان ادیوری با استایل نئومورف تیرهٔ برنامه.
     SDK ویوها را با این شناسه‌ها پر می‌کند:
     adivery_wrapper / adivery_headline / adivery_description /
-    adivery_advertiser / adivery_call_to_action / adivery_icon
+    adivery_advertiser / adivery_call_to_action / adivery_icon /
+    adivery_image (تصویر بزرگ تبلیغ)
 -->
-<com.neuanki.app.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ir.scicore.flash.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,86 +16,103 @@
         android:id="@+id/adivery_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="14dp">
+        android:orientation="vertical">
 
+        <!-- تصویر بزرگ تبلیغ -->
         <ImageView
-            android:id="@+id/adivery_icon"
-            android:layout_width="46dp"
-            android:layout_height="46dp"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/cd_ad" />
+            android:id="@+id/adivery_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:background="@color/chipBg"
+            android:contentDescription="@string/cd_ad"
+            android:visibility="gone" />
 
+        <!-- ردیف محتوا: آیکن + متن + دکمه -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp">
+
+            <ImageView
+                android:id="@+id/adivery_icon"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/cd_ad" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ad_badge"
-                    android:textSize="10sp"
-                    android:textColor="@color/textHint"
-                    android:background="@drawable/bg_chip"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp" />
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ad_badge"
+                        android:textSize="10sp"
+                        android:textColor="@color/textHint"
+                        android:background="@drawable/bg_chip"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp" />
+
+                    <TextView
+                        android:id="@+id/adivery_advertiser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="11sp"
+                        android:textColor="@color/textHint" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/adivery_advertiser"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/adivery_headline"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
                     android:maxLines="1"
                     android:ellipsize="end"
-                    android:textSize="11sp"
-                    android:textColor="@color/textHint" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary" />
+
+                <TextView
+                    android:id="@+id/adivery_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textSize="12sp"
+                    android:textColor="@color/textSecondary" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/adivery_headline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:textSize="15sp"
+            <ir.scicore.flash.widget.NeumorphButton
+                android:id="@+id/adivery_call_to_action"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:minWidth="96dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:textColor="@color/textPrimary" />
-
-            <TextView
-                android:id="@+id/adivery_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:textSize="12sp"
-                android:textColor="@color/textSecondary" />
+                android:textColor="@color/accentBright"
+                app:nm_radius="14dp" />
         </LinearLayout>
-
-        <com.neuanki.app.widget.NeumorphButton
-            android:id="@+id/adivery_call_to_action"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:minWidth="96dp"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:textColor="@color/accentBright"
-            app:nm_radius="14dp" />
     </LinearLayout>
-</com.neuanki.app.widget.NeumorphLayout>
+</ir.scicore.flash.widget.NeumorphLayout>

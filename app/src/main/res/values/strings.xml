@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">نئوآنکی</string>
+    <string name="app_name">فلشی فای</string>
 
     <!-- اکتیویتی‌ها -->
     <string name="stats">آمار</string>
@@ -103,7 +103,7 @@
     <string name="ai_guide_title">ساخت فلش‌کارت با هوش مصنوعی</string>
     <string name="btn_ai_guide">نحوهٔ ساخت فلش‌کارت با هوش مصنوعی</string>
     <string name="cd_ai">آموزش هوش مصنوعی</string>
-    <string name="ai_intro">با هوش مصنوعی رایگان DeepSeek می‌توانی از کتاب، جزوه، مقاله یا حتی یادداشت‌های خودت، هر تعداد فلش‌کارت بسازی و مستقیم داخل نئوآنکی ذخیره کنی. فقط ۴ قدم تا یک دک کامل فاصله داری:</string>
+    <string name="ai_intro">با هوش مصنوعی رایگان DeepSeek می‌توانی از کتاب، جزوه، مقاله یا حتی یادداشت‌های خودت، هر تعداد فلش‌کارت بسازی و مستقیم داخل فلشی فای ذخیره کنی. فقط ۴ قدم تا یک دک کامل فاصله داری:</string>
     <string name="ai_step1_title">قدم ۱ — فایل منبع را آماده کن</string>
     <string name="ai_step1_body">فایل کتاب یا جزوه‌ات (PDF، Word، TXT یا حتی عکس واضح از صفحات) را روی گوشی یا کامپیوتر داشته باش. اگر کتاب حجم زیادی دارد، بهتر است فقط فصل‌هایی که می‌خواهی را جدا کنی — هم سرعت هوش مصنوعی بیشتر می‌شود و هم کیفیت کارت‌ها.</string>
     <string name="ai_step2_title">قدم ۲ — برو به DeepSeek و فایل را بفرست</string>
@@ -128,7 +128,7 @@
 سؤال[TAB]پاسخ
 بین سؤال و پاسخ فقط یک کاراکتر Tab بگذار.</string>
     <string name="ai_step4_title">قدم ۴ — خروجی را کپی و در برنامه بریز</string>
-    <string name="ai_step4_body">وقتی DeepSeek لیست فلش‌کارت‌ها را نوشت، همهٔ خط‌ها را انتخاب و کپی کن. حالا در نئوآنکی: دکمهٔ پایین صفحه ← «ساخت دک جدید» ← برای دک یک اسم بنویس ← «وارد کردن از متن» ← خروجی را پیست کن ← «افزودن به لیست» و در پایان «ذخیرهٔ دک». تمام! کارت‌ها با زمان‌بندی هوشمند آمادهٔ مرورند.</string>
+    <string name="ai_step4_body">وقتی DeepSeek لیست فلش‌کارت‌ها را نوشت، همهٔ خط‌ها را انتخاب و کپی کن. حالا در فلشی فای: دکمهٔ پایین صفحه ← «ساخت دک جدید» ← برای دک یک اسم بنویس ← «وارد کردن از متن» ← خروجی را پیست کن ← «افزودن به لیست» و در پایان «ذخیرهٔ دک». تمام! کارت‌ها با زمان‌بندی هوشمند آمادهٔ مرورند.</string>
     <string name="ai_tips_title">چند نکتهٔ طلایی</string>
     <string name="ai_tips_body">• اگر خروجی طولانی شد، از DeepSeek بخواه «ادامه بده» تا لیست کامل شود.
 • برای هر درس یا فصل یک دک جدا بساز تا آمار مرور منظم بماند.
@@ -168,7 +168,7 @@
     <string name="settings_reminder">یادآور روزانه</string>
     <string name="settings_reminder_on">یادآور روزانه فعال شد</string>
     <string name="settings_reminder_off">یادآور خاموش شد</string>
-    <string name="settings_about">دربارهٔ نئوآنکی</string>
+    <string name="settings_about">دربارهٔ فلشی فای</string>
     <string name="settings_about_desc">کلون نئومورفِ AnkiDroid — نسخهٔ ۱٫۰ — همهٔ داده‌ها فقط روی دستگاه ذخیره می‌شوند</string>
     <string name="pick_time">انتخاب زمان</string>
     <string name="perm_denied">برای نمایش یادآور، اجازهٔ اعلان را بده</string>
