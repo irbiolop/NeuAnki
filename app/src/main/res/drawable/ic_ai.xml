@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ستاره‌های درخشان — نماد هوش مصنوعی -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M11,3 L13.1,8.9 L19,11 L13.1,13.1 L11,19 L8.9,13.1 L3,11 L8.9,8.9 Z M18.5,14 L19.4,16.6 L22,17.5 L19.4,18.4 L18.5,21 L17.6,18.4 L15,17.5 L17.6,16.6 Z M17.5,3 L18.1,4.9 L20,5.5 L18.1,6.1 L17.5,8 L16.9,6.1 L15,5.5 L16.9,4.9 Z" />
+</vector>

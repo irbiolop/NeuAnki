@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootGuide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- نوار بالا -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.neuanki.app.widget.NeumorphIconButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/cd_back"
+            app:nm_radius="14dp" />
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_ai"
+            android:contentDescription="@string/cd_ai" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="@string/ai_guide_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:overScrollMode="never"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- مقدمه -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingMultiplier="1.45"
+                android:text="@string/ai_intro"
+                android:textSize="14sp"
+                android:textColor="@color/textPrimary" />
+
+            <!-- قدم ۱ -->
+            <TextView
+                style="@style/GuideStepTitle"
+                android:text="@string/ai_step1_title" />
+
+            <TextView
+                style="@style/GuideStepBody"
+                android:text="@string/ai_step1_body" />
+
+            <!-- قدم ۲ -->
+            <TextView
+                style="@style/GuideStepTitle"
+                android:text="@string/ai_step2_title" />
+
+            <TextView
+                style="@style/GuideStepBody"
+                android:text="@string/ai_step2_body" />
+
+            <com.neuanki.app.widget.NeumorphButton
+                android:id="@+id/btnOpenDeepseek"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:paddingStart="26dp"
+                android:paddingEnd="26dp"
+                android:text="@string/open_deepseek"
+                android:textColor="@color/accentBright"
+                android:textSize="14sp"
+                app:nm_radius="16dp" />
+
+            <!-- قدم ۳ -->
+            <TextView
+                style="@style/GuideStepTitle"
+                android:text="@string/ai_step3_title" />
+
+            <TextView
+                style="@style/GuideStepBody"
+                android:text="@string/ai_step3_body" />
+
+            <!-- پرامپت ۱ -->
+            <com.neuanki.app.widget.NeumorphLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:nm_inset="true"
+                app:nm_radius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ai_prompt1_title"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accentBright" />
+
+                    <TextView
+                        android:id="@+id/tvPrompt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingMultiplier="1.4"
+                        android:text="@string/ai_prompt1"
+                        android:textSize="13sp"
+                        android:textColor="@color/textPrimary"
+                        android:textIsSelectable="true" />
+
+                    <com.neuanki.app.widget.NeumorphButton
+                        android:id="@+id/btnCopy1"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/copy_prompt"
+                        android:textColor="@color/accentBright"
+                        android:textSize="13sp"
+                        app:nm_radius="13dp" />
+                </LinearLayout>
+            </com.neuanki.app.widget.NeumorphLayout>
+
+            <!-- پرامپت ۲ -->
+            <com.neuanki.app.widget.NeumorphLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:nm_inset="true"
+                app:nm_radius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ai_prompt2_title"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accentBright" />
+
+                    <TextView
+                        android:id="@+id/tvPrompt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingMultiplier="1.4"
+                        android:text="@string/ai_prompt2"
+                        android:textSize="13sp"
+                        android:textColor="@color/textPrimary"
+                        android:textIsSelectable="true" />
+
+                    <com.neuanki.app.widget.NeumorphButton
+                        android:id="@+id/btnCopy2"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/copy_prompt"
+                        android:textColor="@color/accentBright"
+                        android:textSize="13sp"
+                        app:nm_radius="13dp" />
+                </LinearLayout>
+            </com.neuanki.app.widget.NeumorphLayout>
+
+            <!-- قدم ۴ -->
+            <TextView
+                style="@style/GuideStepTitle"
+                android:text="@string/ai_step4_title" />
+
+            <TextView
+                style="@style/GuideStepBody"
+                android:text="@string/ai_step4_body" />
+
+            <!-- نکته‌ها -->
+            <TextView
+                style="@style/GuideStepTitle"
+                android:text="@string/ai_tips_title" />
+
+            <com.neuanki.app.widget.NeumorphLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:nm_inset="true"
+                app:nm_radius="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="@string/ai_tips_body"
+                    android:textSize="13sp"
+                    android:textColor="@color/textSecondary" />
+            </com.neuanki.app.widget.NeumorphLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

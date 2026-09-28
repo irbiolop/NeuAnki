@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootBuilder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- نوار بالا -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.neuanki.app.widget.NeumorphIconButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/cd_back"
+            app:nm_radius="14dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/deck_builder_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary" />
+
+        <com.neuanki.app.widget.NeumorphIconButton
+            android:id="@+id/btnAiGuide"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_ai"
+            android:contentDescription="@string/cd_ai"
+            app:nm_radius="14dp" />
+    </LinearLayout>
+
+    <!-- دکمهٔ آموزش هوش مصنوعی -->
+    <com.neuanki.app.widget.NeumorphButton
+        android:id="@+id/btnOpenAiGuide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_ai"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/btn_ai_guide"
+        android:textColor="@color/accentBright"
+        android:textSize="14sp"
+        app:nm_radius="17dp" />
+
+    <!-- نام دک -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/deck_name"
+        android:textSize="13sp"
+        android:textColor="@color/textSecondary" />
+
+    <EditText
+        android:id="@+id/etDeckName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_inset"
+        android:padding="14dp"
+        android:textSize="15sp"
+        android:textColor="@color/textPrimary"
+        android:hint="@string/deck_name_hint"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <!-- کارت‌های آماده -->
+    <TextView
+        android:id="@+id/tvDraftCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/cards_list_title"
+        android:textSize="13sp"
+        android:textColor="@color/textSecondary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:overScrollMode="never"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/llDrafts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- ورودی کارت جدید -->
+    <EditText
+        android:id="@+id/etFront"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_inset"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColor="@color/textPrimary"
+        android:hint="@string/front_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="3" />
+
+    <EditText
+        android:id="@+id/etBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_inset"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColor="@color/textPrimary"
+        android:hint="@string/back_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="3" />
+
+    <!-- دکمه‌های افزاره -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.neuanki.app.widget.NeumorphButton
+            android:id="@+id/btnAddCard"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="@string/add_card_btn"
+            android:textColor="@color/textPrimary"
+            android:textSize="14sp"
+            app:nm_radius="15dp" />
+
+        <com.neuanki.app.widget.NeumorphButton
+            android:id="@+id/btnImportText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="@string/import_text_btn"
+            android:textColor="@color/textPrimary"
+            android:textSize="14sp"
+            app:nm_radius="15dp" />
+    </LinearLayout>
+
+    <!-- ذخیرهٔ دک -->
+    <com.neuanki.app.widget.NeumorphButton
+        android:id="@+id/btnSaveDeck"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/save_deck_btn"
+        android:textColor="@color/accentBright"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:nm_radius="18dp" />
+</LinearLayout>

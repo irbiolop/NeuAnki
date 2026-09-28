@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نئوآنکی</string>
+
+    <!-- اکتیویتی‌ها -->
+    <string name="stats">آمار</string>
+    <string name="browser">مرورگر کارت‌ها</string>
+    <string name="settings">تنظیمات</string>
+    <string name="review">مرور</string>
+
+    <!-- منوها -->
+    <string name="menu_import">وارد کردن فایل apkg</string>
+    <string name="menu_add_card">افزودن کارت</string>
+    <string name="review_all">مرور همهٔ دک‌ها</string>
+
+    <!-- لیست دک‌ها -->
+    <string name="empty_title">هنوز دکی وجود ندارد</string>
+    <string name="empty_sub">فایل apkg دک‌های انکی را وارد کن، یا دک خودت را بساز و با هوش مصنوعی فلش‌کارت تولید کن</string>
+    <string name="empty_import">وارد کردن دک انکی</string>
+    <string name="deck_new">جدید</string>
+    <string name="deck_learn">یادگیری</string>
+    <string name="deck_due">مرور</string>
+    <string name="rename_deck">تغییر نام دک</string>
+    <string name="deck_name">نام دک</string>
+    <string name="confirm_delete_deck_title">حذف دک</string>
+    <string name="confirm_delete_deck_msg">«%1$s» و همهٔ کارت‌های آن حذف شود؟</string>
+    <string name="deck_deleted">دک حذف شد</string>
+    <string name="deck_renamed">نام دک تغییر کرد</string>
+    <string name="choose_file">انتخاب فایل apkg</string>
+
+    <!-- مرور -->
+    <string name="show_answer">نمایش پاسخ</string>
+    <string name="again">دوباره</string>
+    <string name="hard">سخت</string>
+    <string name="good">خوب</string>
+    <string name="easy">آسان</string>
+    <string name="finished_title">جلسهٔ مرور تمام شد!</string>
+    <string name="finished_sub">امروز %1$s کارت مرور کردی. عالی بود</string>
+    <string name="check_again">بررسی مجدد</string>
+    <string name="undo">بازگردانی</string>
+    <string name="nothing_to_undo">چیزی برای بازگردانی نیست</string>
+    <string name="suspend_card">تعلیق کارت</string>
+    <string name="unsuspend_card">رفع تعلیق کارت</string>
+    <string name="bury_card">دفن کارت برای امروز</string>
+    <string name="edit_card">ویرایش کارت</string>
+    <string name="delete_card">حذف کارت</string>
+    <string name="end_session">پایان جلسه</string>
+    <string name="more_options">گزینه‌های بیشتر</string>
+    <string name="suspended_msg">کارت تعلیق شد</string>
+    <string name="unsuspended_msg">تعلیق کارت برداشته شد</string>
+    <string name="buried_msg">کارت برای امروز دفن شد</string>
+    <string name="card_deleted">کارت حذف شد</string>
+    <string name="session_reviewed_fmt">در این جلسه %1$s کارت مرور شد</string>
+    <string name="next_in">مرور بعدی تا %1$s</string>
+    <string name="review_none">کارتی برای مرور نیست</string>
+    <string name="type_answer_hint">پاسخ را تایپ کن…</string>
+
+    <!-- مرورگر -->
+    <string name="search_hint">جستجو در کارت‌ها…</string>
+    <string name="all_decks">همهٔ دک‌ها</string>
+    <string name="no_results">نتیجه‌ای پیدا نشد</string>
+    <string name="confirm_delete_note">حذف این یادداشت و همهٔ کارت‌هایش؟</string>
+    <string name="note_deleted">یادداشت حذف شد</string>
+    <string name="tags_hint">برچسب‌ها (با فاصله جدا شوند)</string>
+    <string name="choose_deck">انتخاب دک</string>
+    <string name="note_type">نوع یادداشت</string>
+    <string name="card_added">کارت اضافه شد</string>
+    <string name="saved">ذخیره شد</string>
+    <string name="need_field">حداقل یکی از فیلدها را پر کن</string>
+
+    <!-- ایمپورت -->
+    <string name="importing">در حال وارد کردن دک…</string>
+    <string name="import_done_fmt">وارد شد: %1$s دک، %2$s یادداشت، %3$s کارت، %4$s فایل مدیا</string>
+    <string name="import_err_newformat">این فایل با فرمت جدید انکی ساخته شده است. لطفاً در Anki دسکتاپ هنگام خروجی گرفتن، گزینهٔ «پشتیبانی از نسخه‌های قدیمی‌تر» را فعال کن و دوباره تلاش کن.</string>
+    <string name="import_err">فایل apkg معتبر نیست یا خراب است.</string>
+
+    <!-- ساخت دک مستقل -->
+    <string name="deck_builder_title">ساخت دک</string>
+    <string name="deck_name_hint">نام دک (مثلاً زیست‌شناسی فصل ۳)</string>
+    <string name="cards_list_title">کارت‌های آمادهٔ ذخیره</string>
+    <string name="cards_count_fmt">%1$s کارت آماده است</string>
+    <string name="front_hint">روی کارت (سؤال)</string>
+    <string name="back_hint">پشت کارت (پاسخ)</string>
+    <string name="add_card_btn">افزودن کارت</string>
+    <string name="import_text_btn">وارد کردن از متن</string>
+    <string name="save_deck_btn">ذخیرهٔ دک</string>
+    <string name="need_deck_name">اول نام دک را بنویس</string>
+    <string name="need_cards">حداقل یک کارت اضافه کن</string>
+    <string name="deck_created_fmt">دک «%1$s» با %2$s کارت ساخته شد</string>
+    <string name="deck_appended_fmt">%1$s کارت به دکِ موجود «%2$s» اضافه شد</string>
+    <string name="paste_title">وارد کردن کارت از متن</string>
+    <string name="paste_hint">خروجی هوش مصنوعی یا متن خودت را اینجا بچسبان…
+هر خط: سؤال و پاسخ که با Tab (یا ویرگول) از هم جدا شده‌اند</string>
+    <string name="paste_import_btn">افزودن به لیست</string>
+    <string name="paste_added_fmt">%1$s کارت از متن اضافه شد</string>
+    <string name="paste_none">خط قابل استفاده‌ای پیدا نشد. جداکنندهٔ پیشنهادی: Tab</string>
+    <string name="remove_draft">حذف کارت</string>
+    <string name="menu_new_deck">ساخت دک جدید</string>
+    <string name="empty_create">ساخت دک جدید</string>
+    <string name="cd_new_deck">ساخت دک جدید</string>
+
+    <!-- آموزش ساخت فلش‌کارت با هوش مصنوعی -->
+    <string name="ai_guide_title">ساخت فلش‌کارت با هوش مصنوعی</string>
+    <string name="btn_ai_guide">نحوهٔ ساخت فلش‌کارت با هوش مصنوعی</string>
+    <string name="cd_ai">آموزش هوش مصنوعی</string>
+    <string name="ai_intro">با هوش مصنوعی رایگان DeepSeek می‌توانی از کتاب، جزوه، مقاله یا حتی یادداشت‌های خودت، هر تعداد فلش‌کارت بسازی و مستقیم داخل نئوآنکی ذخیره کنی. فقط ۴ قدم تا یک دک کامل فاصله داری:</string>
+    <string name="ai_step1_title">قدم ۱ — فایل منبع را آماده کن</string>
+    <string name="ai_step1_body">فایل کتاب یا جزوه‌ات (PDF، Word، TXT یا حتی عکس واضح از صفحات) را روی گوشی یا کامپیوتر داشته باش. اگر کتاب حجم زیادی دارد، بهتر است فقط فصل‌هایی که می‌خواهی را جدا کنی — هم سرعت هوش مصنوعی بیشتر می‌شود و هم کیفیت کارت‌ها.</string>
+    <string name="ai_step2_title">قدم ۲ — برو به DeepSeek و فایل را بفرست</string>
+    <string name="ai_step2_body">وب‌سایت chat.deepseek.com را باز کن (یا اپ DeepSeek را نصب کن) و وارد شو. روی دکمهٔ + یا آپلود فایل بزن و فایل کتابت را پیوست کن. اگر فایل فرمت‌شده قابل آپلود نبود، متنِ بخش موردنظر را کپی و در چت پیست کن.</string>
+    <string name="ai_step3_title">قدم ۳ — پرامپت آماده را بفرست</string>
+    <string name="ai_step3_body">یکی از پرامپت‌های زیر را کپی کن، به‌جای «تعداد»، عدد دلخواهت را بنویس و همراه با فایل بفرست. پرامپت اول برای یادگیری عمومی هر کتابی است و پرامپت دوم مخصوص آمادگی امتحان:</string>
+    <string name="ai_prompt1_title">پرامپت ۱ — فلش‌کارت از هر کتاب</string>
+    <string name="ai_prompt2_title">پرامپت ۲ — آمادگی امتحان</string>
+    <string name="ai_prompt1">سلام! فایلی که فرستادم را با دقت بخوان و از کل محتوای آن دقیقاً {تعداد} فلش‌کارت آموزشی بساز.
+قوانین ساخت:
+۱) هر فلش‌کارت فقط یک نکتهٔ مهم را پوشش دهد (تعریف، نکتهٔ کلیدی، فرمول، تاریخ و…).
+۲) سؤال کوتاه و روشن باشد؛ پاسخ کامل ولی حداکثر ۲ جمله.
+۳) از جزئیات بی‌اهمیت و مثال‌های طولانی صرف‌نظر کن.
+۴) خروجی را فقط به این شکل بده و هیچ توضیح، شماره یا علامت اضافه ننویس:
+سؤال[TAB]پاسخ
+۵) هر فلش‌کارت دقیقاً در یک خط باشد و بین سؤال و پاسخ فقط یک کاراکتر Tab بگذار.
+۶) داخل متن سؤال و پاسخ هیچ Tab یا خط جدید ننویس.</string>
+    <string name="ai_prompt2">فایل ضمیمه جزوهٔ درس من است. برای آمادگی امتحان، از نکات تست‌پذیر و مهم آن دقیقاً {تعداد} فلش‌کارت بساز.
+سؤال‌ها شبیه سؤالات امتحان باشند: تعریف، مقایسه، چرا و چگونه، جای خالی و فرمول.
+پاسخ‌ها کامل ولی فشرده باشند (حداکثر ۲ جمله).
+خروجی فقط در قالب زیر و هر کارت در یک خط، بدون هیچ توضیح یا شماره‌گذاری اضافه:
+سؤال[TAB]پاسخ
+بین سؤال و پاسخ فقط یک کاراکتر Tab بگذار.</string>
+    <string name="ai_step4_title">قدم ۴ — خروجی را کپی و در برنامه بریز</string>
+    <string name="ai_step4_body">وقتی DeepSeek لیست فلش‌کارت‌ها را نوشت، همهٔ خط‌ها را انتخاب و کپی کن. حالا در نئوآنکی: دکمهٔ پایین صفحه ← «ساخت دک جدید» ← برای دک یک اسم بنویس ← «وارد کردن از متن» ← خروجی را پیست کن ← «افزودن به لیست» و در پایان «ذخیرهٔ دک». تمام! کارت‌ها با زمان‌بندی هوشمند آمادهٔ مرورند.</string>
+    <string name="ai_tips_title">چند نکتهٔ طلایی</string>
+    <string name="ai_tips_body">• اگر خروجی طولانی شد، از DeepSeek بخواه «ادامه بده» تا لیست کامل شود.
+• برای هر درس یا فصل یک دک جدا بساز تا آمار مرور منظم بماند.
+• اگر جداکنندهٔ Tab درست کار نکرد، می‌توانی در پرامپت Tab را با ویرگول جایگزین کنی؛ برنامه هر دو را می‌فهمد.
+• در خروجی هیچ توضیح اضافه‌ای از هوش مصنوعی نپذیر — فقط خط‌های «سؤال[TAB]پاسخ» وارد برنامه می‌شوند.</string>
+    <string name="copy_prompt">کپی پرامپت</string>
+    <string name="copied">پرامپت کپی شد</string>
+    <string name="open_deepseek">باز کردن DeepSeek</string>
+
+    <!-- بازبینی جلسه -->
+    <string name="check_again">بازبینی کارت‌های جلسه</string>
+    <string name="cram_start_fmt">بازبینی %1$s کارت این جلسه شروع شد</string>
+    <string name="cram_none">در این جلسه کاری مرور نشده که بازبینی شود</string>
+
+    <!-- تبلیغ -->
+    <string name="ad_badge">تبلیغ</string>
+    <string name="cd_ad">تبلیغ</string>
+
+    <!-- آمار -->
+    <string name="stats_today">مرورهای امروز</string>
+    <string name="stats_total">کل کارت‌ها</string>
+    <string name="stats_streak">زنجیرهٔ روزها</string>
+    <string name="stats_correct">پاسخ خوب</string>
+    <string name="stats_reviews_30">مرورهای ۳۰ روز گذشته</string>
+    <string name="stats_forecast">پیش‌بینی مرور ۳۰ روز آینده</string>
+    <string name="stats_dist">توزیع وضعیت کارت‌ها</string>
+    <string name="dist_new">جدید</string>
+    <string name="dist_learn">در حال یادگیری</string>
+    <string name="dist_young">جوان</string>
+    <string name="dist_mature">بالغ</string>
+    <string name="dist_susp">معلق</string>
+
+    <!-- تنظیمات -->
+    <string name="settings_new_limit">سقف کارت‌های جدید روزانه</string>
+    <string name="settings_rev_limit">سقف مرور روزانه</string>
+    <string name="settings_steps">مراحل یادگیری (دقیقه)</string>
+    <string name="settings_steps_desc">با ویرگول جدا کن، مثلاً 1,10</string>
+    <string name="settings_reminder">یادآور روزانه</string>
+    <string name="settings_reminder_on">یادآور روزانه فعال شد</string>
+    <string name="settings_reminder_off">یادآور خاموش شد</string>
+    <string name="settings_about">دربارهٔ نئوآنکی</string>
+    <string name="settings_about_desc">کلون نئومورفِ AnkiDroid — نسخهٔ ۱٫۰ — همهٔ داده‌ها فقط روی دستگاه ذخیره می‌شوند</string>
+    <string name="pick_time">انتخاب زمان</string>
+    <string name="perm_denied">برای نمایش یادآور، اجازهٔ اعلان را بده</string>
+
+    <!-- عمومی -->
+    <string name="save">ذخیره</string>
+    <string name="cancel">انصراف</string>
+    <string name="delete">حذف</string>
+    <string name="ok">باشه</string>
+    <string name="yes">بله</string>
+    <string name="today">امروز</string>
+    <string name="day">روز</string>
+    <string name="days">روز</string>
+    <string name="min">دقیقه</string>
+    <string name="month">ماه</string>
+
+    <!-- نوتیفیکیشن -->
+    <string name="notif_channel">یادآور مرور روزانه</string>
+    <string name="notif_title">وقت مرور است</string>
+    <string name="notif_text_fmt">%1$s کارت آمادهٔ مرور است</string>
+
+    <!-- گزارش کرش -->
+    <string name="crash_title">گزارش خطا</string>
+    <string name="crash_send">ارسال گزارش خطا</string>
+    <string name="crash_later">بستن</string>
+
+    <!-- توصیف محتوا -->
+    <string name="cd_back">بازگشت</string>
+    <string name="cd_stats">آمار</string>
+    <string name="cd_browser">مرورگر</string>
+    <string name="cd_settings">تنظیمات</string>
+    <string name="cd_import">وارد کردن</string>
+    <string name="cd_undo">بازگردانی</string>
+    <string name="cd_more">گزینه‌ها</string>
+    <string name="cd_fab">دکمهٔ اصلی</string>
+</resources>

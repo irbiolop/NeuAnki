@@ -1,0 +1,90 @@
+name: Emulator smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      api:
+        description: 'Android API level'
+        required: false
+        default: '34'
+
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v3
+
+      - run: chmod +x gradlew
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Install system image
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" > /dev/null
+
+      - name: Boot emulator
+        run: |
+          export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+          export ANDROID_USER_HOME=$HOME/.android
+          export ANDROID_AVD_HOME=$HOME/.android/avd
+          mkdir -p "$ANDROID_AVD_HOME"
+          ls -la /dev/kvm || echo "NO KVM DEVICE"
+          sudo chmod 666 /dev/kvm || true
+          echo "no" | $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n testavd -k "system-images;android-${{ github.event.inputs.api }};google_apis;x86_64" -d pixel --force
+          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list avd || true
+          $ANDROID_HOME/emulator/emulator -avd testavd -no-window -gpu swiftshader_indirect -no-audio -no-boot-anim -no-snapshot -accel auto > emulator.log 2>&1 &
+          adb wait-for-device
+          for i in $(seq 1 60); do
+            BOOT=$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r' || echo 0)
+            echo "boot check $i: $BOOT"
+            if [ "$BOOT" = "1" ]; then
+              echo "EMULATOR BOOTED"
+              break
+            fi
+            sleep 10
+          done
+          cat emulator.log || true
+        timeout-minutes: 20
+
+      - name: Install and launch app
+        run: |
+          export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+          adb install -r app/build/outputs/apk/debug/app-debug.apk
+          adb logcat -c
+          adb shell am start -W -n com.neuanki.app/.ui.MainActivity
+          sleep 25
+          echo "=== PROCESS CHECK ==="
+          adb shell pidof com.neuanki.app || echo PROCESS_DEAD
+          echo "=== CRASH BUFFER ==="
+          adb logcat -d -b crash | tee crash_report.txt
+          echo "=== SCREENSHOT ==="
+          adb exec-out screencap -p > screenshot.png || true
+          ls -la screenshot.png || true
+
+      - name: Verdict
+        run: |
+          if grep -q "FATAL EXCEPTION" crash_report.txt; then
+            echo "RESULT: APP CRASHED"
+            exit 1
+          fi
+          echo "RESULT: APP RUNNING OK"
+
+      - name: Upload logs and screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emulator-logs
+          path: |
+            crash_report.txt
+            screenshot.png
+            emulator.log

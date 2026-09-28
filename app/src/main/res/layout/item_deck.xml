@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.neuanki.app.widget.NeumorphLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/deckRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="14dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:nm_radius="22dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDeckName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvNew"
+                style="@style/CountChip"
+                android:textColor="@color/countNew"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvLearn"
+                style="@style/CountChip"
+                android:textColor="@color/countLearn"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvDue"
+                style="@style/CountChip"
+                android:textColor="@color/countDue" />
+        </LinearLayout>
+    </LinearLayout>
+</com.neuanki.app.widget.NeumorphLayout>
