@@ -139,7 +139,6 @@
     <string name="open_deepseek">باز کردن DeepSeek</string>
 
     <!-- بازبینی جلسه -->
-    <string name="check_again">بازبینی کارت‌های جلسه</string>
     <string name="cram_start_fmt">بازبینی %1$s کارت این جلسه شروع شد</string>
     <string name="cram_none">در این جلسه کاری مرور نشده که بازبینی شود</string>
 
